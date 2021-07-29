@@ -1,0 +1,29 @@
+Test Case -1 Login Functionality
+-User should be able to navigated to home page
+-User navigates to My Account section
+-User selects Login and enters the invalid credentials.
+-User gets error message
+-User enters the valid credentials.
+-User navigated to profile section
+
+Test Case -2 Menu Filter Functionality
+-User should be able to navigated to home page
+-User navigates to My Account section
+-User enters the valid credentials.
+-User navigated to profile section
+-User navigates Home Page
+-User selects Boston, United States for destination
+-User selects 21/08/2021 for check-in and 31/08/2021 for check out
+-User selects 4 adults and 1 child
+-User searches the filtered options
+
+Test Case -3 Menu Featured Services Functionality
+-User should be able to navigated to home page
+-User navigates to My Account section
+-User enters the valid credentials.
+-User navigated to profile section
+-User navigates Home Page
+-User selects a featured Tours
+-User books one of the available Package Type Tours
+-User fills the required field and book
+-User is navigated to invoice page
