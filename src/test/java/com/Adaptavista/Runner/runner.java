@@ -11,8 +11,8 @@ import org.junit.runner.RunWith;
                 "rerun:target/rerun.txt"},
         features = "src/test/resources/Features",
         glue = "com/Adaptavista/stepDefs",
-        dryRun = false,
-        tags = "@"
+        dryRun = true,
+        tags = "editor"
 )
 public class runner {
 

@@ -85,7 +85,7 @@
                         <!-- threadCount>4</threadCount (thread per core) -->
                         <!-- perCoreThreadCount>false</perCoreThreadCount (thread for all cores) -->
                         <testFailureIgnore>true</testFailureIgnore>
-                        <include>**/*Runner.java</include>
+                        <include>**/*runner.java</include>
                     </includes>
                 </configuration>
             </plugin>
