@@ -1,6 +1,6 @@
 Feature: editor
 
-  @editor
+  @editor @all
   Scenario: Editor Automation
     Given User navigates to URL "editorUrl" page
     When  User navigates to page as a default "Your content goes here." writen

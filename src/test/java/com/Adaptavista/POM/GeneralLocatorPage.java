@@ -9,4 +9,8 @@ public class GeneralLocatorPage {
         public static final String boldOption_ByXpath="//button[@title='Bold']";
     }
 
+    public class Alerts{
+        public static final String pageHeader_ByTagName="h3";
+    }
+
 }

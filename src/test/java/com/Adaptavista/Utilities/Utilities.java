@@ -1,6 +1,7 @@
 package com.Adaptavista.Utilities;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class Utilities {
@@ -27,6 +28,10 @@ public class Utilities {
 
     public static void clear(By element){
         Driver.get().findElement(element).clear();
+    }
+
+    public static void clickByTextValue(String textValue){
+        Driver.get().findElement(By.xpath("//*[text()='"+textValue+"']")).click();
     }
 
 
