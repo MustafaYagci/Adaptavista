@@ -25,6 +25,9 @@ public class Utilities {
     public static String getText(By element){
         return  Driver.get().findElement(element).getText();
     }
+    public static String getText(WebElement element){
+        return element.getText();
+    }
 
     public static void clear(By element){
         Driver.get().findElement(element).clear();

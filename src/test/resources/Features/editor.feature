@@ -1,4 +1,4 @@
-Feature: editor
+Feature: Editor
 
   @editor @all
   Scenario: Editor Automation

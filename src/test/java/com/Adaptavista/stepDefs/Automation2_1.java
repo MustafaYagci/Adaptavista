@@ -12,6 +12,12 @@ import org.junit.Assert;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class Automation2_1 extends Utilities {
 
@@ -19,6 +25,10 @@ public class Automation2_1 extends Utilities {
     By text=By.xpath(GeneralLocatorPage.Editor.text_ByXpath);
     By boldOption=By.xpath(GeneralLocatorPage.Editor.boldOption_ByXpath);
     By pageHeader=By.tagName(GeneralLocatorPage.Alerts.pageHeader_ByTagName);
+    By table1Header=By.xpath(GeneralLocatorPage.Tables.table1Headers_ByXpath);
+    By table1Data=By.xpath(GeneralLocatorPage.Tables.tableData_ByXpath);
+    By table1Row=By.xpath(GeneralLocatorPage.Tables.table1Row_ByXpath);
+    By table1Column=By.xpath(GeneralLocatorPage.Tables.table1Column_ByXpath);
     WebDriver driver=Driver.get();
     Alert alerts;
 
@@ -75,6 +85,33 @@ public class Automation2_1 extends Utilities {
                 driver.switchTo().alert().accept();
                 break;
 
+        }
+
+    }
+
+    @And("Table values are setted up")
+    public void tableValuesAreSettedUp() {
+        List<Map<String,String>> table = new ArrayList<>();
+        Map<String,String> tableComponents=new HashMap<>();
+        List<WebElement>table1Headers=driver.findElements(table1Header);
+        List<WebElement> table1Datas  =driver.findElements(table1Data);
+        List<WebElement> table1Rows   =driver.findElements(table1Row);
+        List<WebElement> table1Columns=driver.findElements(table1Column);
+        int rowNum=table1Rows.size();
+        int columnNum=table1Columns.size();
+
+       for(int i=1; i<rowNum; i++){
+
+           for (int y=0; y<columnNum-1; y++){
+               String key=getText(table1Headers.get(y));
+               String value=getText(table1Datas.get(y));
+               tableComponents.put(key,value);
+           }
+           table.add(tableComponents);
+       }
+
+        for (int i=0; i<table.size(); i++){
+            System.out.println(table.get(i));
         }
 
     }
